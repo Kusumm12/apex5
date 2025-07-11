@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Projects</title>
+
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>=
+    <!-- Navigation between projects -->
+    <nav class="project-nav">
+        <ul>
+            <li><a href="#portfolio" class="active">Portfolio</a></li>
+            <li><a href="#todo-list-app">To-Do List</a></li>
+            <li><a href="#product-listing">Product Listing</a></li>
+        </ul>
+    </nav>
+    
+    <div class="project-container">
+        <!-- Portfolio Project -->
+        <section id="portfolio">
+            <header class="portfolio-header">
+                <nav class="portfolio-nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main class="portfolio-main">
+                <section id="about">
+                    <h1>About Me</h1>
+                    <div class="about-content">
+                        <img src="raghu 4.jpg"alt="Profile Picture">
+                        <p>I'm a passionate web developer with expertise in HTML, CSS, and JavaScript. I love creating responsive, user-friendly websites and applications that solve real-world problems. With 5 years of experience in front-end development, I've worked on various projects ranging from small business websites to complex web applications.</p>
+                    </div>
+                </section>
+                
+                <section id="projects">
+                    <h2>My Projects</h2>
+                    <div class="project-grid" id="portfolio-projects">
+                        <!-- Projects will be loaded here by JavaScript -->
+                    </div>
+                </section>
+                
+                <section id="contact">
+                    <h2>Contact Me</h2>
+                    <form id="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </main>
+        </section>
+        
+        <!-- To-Do List Project -->
+        <section id="todo-list-app">
+            <div class="todo-container">
+                <h1>My To-Do List</h1>
+                
+                <div class="input-section">
+                    <input type="text" id="todo-input" placeholder="Add a new task...">
+                    <button id="add-btn">Add</button>
+                </div>
+                
+                <div class="filter-section">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                
+                <ul id="todo-list"></ul>
+                
+                <div class="stats">
+                    <span id="remaining-count">0</span> tasks remaining
+                    <button id="clear-completed">Clear Completed</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Listing Project -->
+        <section id="product-listing">
+            <div class="product-container">
+                <h1>Our Products</h1>
+                
+                <div class="controls">
+                    <div class="filter-section">
+                        <h3>Filter by:</h3>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="home">Home</option>
+                        </select>
+                        
+                        <div class="price-range">
+                            <label for="price-filter">Price Range:</label>
+                            <input type="range" id="price-filter" min="0" max="1000" value="1000">
+                            <span id="price-value">Up to $1000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sort-section">
+                        <h3>Sort by:</h3>
+                        <select id="sort-option">
+                            <option value="default">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="product-grid" id="product-grid"></div>
+            </div>
+        </section>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
